@@ -1,81 +1,41 @@
 ---
+title: Welcome to Satoshi's Lantern
 title: Satoshi's Lantern
 description: Get started building your docs site with Starlight.
 template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
+tagline: Congrats on setting up a new Starlight project!
+image:
+file: ../../assets/houston.webp
+actions:
+    - text: Example Guide
     - text: App Store
-      link: /guides/example/
+link: /guides/example/
+      icon: right-arrow
+    - text: Read the Starlight docs
       icon: down-arrow
     - text: Google Play
-      link: https://starlight.astro.build
+link: https://starlight.astro.build
+      icon: external
       icon: download
-      variant: minimal
+variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
-import { Navigation } from "@/components/navigation";
-import { Footer } from "@/components/footer";
-import backgroundImage from "@assets/stock_images/asset1.png";
-import { Download } from "lucide-react";
 
-export default function Homepage() {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Navigation />
-      
-      <main className="relative min-h-screen flex items-center justify-center">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
-        >
-          <div className="absolute inset-0 bg-black bg-opacity-60" />
-        </div>
-        
-        {/* Content */}
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8">
-          <h1 
-            className="text-6xl sm:text-7xl md:text-8xl font-bold text-white mb-12 drop-shadow-2xl"
-            data-testid="app-title"
-          >
-            Satoshi's Lantern
-          </h1>
-          
-          <div className="flex flex-col sm:flex-row gap-6 items-center justify-center">
-            <a
-              href="#"
-              data-testid="download-app-store"
-              className="flex items-center gap-3 bg-black text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-colors duration-200 shadow-2xl min-w-[200px]"
-            >
-              <Download className="w-6 h-6" />
-              <div className="text-left">
-                <div className="text-xs text-gray-300">Download on the</div>
-                <div className="text-lg font-bold">App Store</div>
-              </div>
-            </a>
-            
-            <a
-              href="#"
-              data-testid="download-play-store"
-              className="flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-700 transition-colors duration-200 shadow-2xl min-w-[200px]"
-            >
-              <Download className="w-6 h-6" />
-              <div className="text-left">
-                <div className="text-xs text-green-100">Get it on</div>
-                <div className="text-lg font-bold">Google Play</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </main>
+## Next steps
 
-      <Footer />
-    </div>
-  );
-}
-
-
+<CardGrid stagger>
+<Card title="Update content" icon="pencil">
+Edit `src/content/docs/index.mdx` to see this page change.
+</Card>
+<Card title="Add new content" icon="add-document">
+Add Markdown or MDX files to `src/content/docs` to create new pages.
+</Card>
+<Card title="Configure your site" icon="setting">
+Edit your `sidebar` and other config in `astro.config.mjs`.
+</Card>
+<Card title="Read the docs" icon="open-book">
+Learn more in [the Starlight Docs](https://starlight.astro.build/).
+</Card>
+</CardGrid>
